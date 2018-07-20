@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'puma'
 gem 'rack-conneg'
+gem 'rack-protection', '~> 1.5.5'
 
 # Mongo + Mongoid
 gem 'mongo', '~> 2.1'
