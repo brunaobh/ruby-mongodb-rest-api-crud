@@ -1,0 +1,17 @@
+services:
+
+  products:
+    git_url: git@github.com:brunaobh/ruby-mongodb-rest-api-crud.git
+    git_branch: master
+    command: bundle exec ruby products_service.rb
+    build_root: .
+    ports:
+      - container: 4567
+        http: 80
+        https: 443
+    env_vars:
+      RAILS_ENV: production
+      RACK_ENV: production
+
+databases:
+  - mongodb

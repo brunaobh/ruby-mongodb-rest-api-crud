@@ -1,0 +1,12 @@
+products:
+  build: .
+  command: bundle exec ruby products_service.rb
+  ports:
+    - "4567:4567"
+  links:
+    - mongodb
+  environment:
+    - RAILS_ENV=production
+    - RACK_ENV=production
+mongodb:
+  image: mongo
